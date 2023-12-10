@@ -62,7 +62,46 @@ p {
         margin: 0;
     }
 
-    p#context {
+    #context {
         max-width: 300px;
     }
+}
+
+.std_link {
+    text-decoration: none;
+    color: inherit;
+    transition: ease-out .1s;
+}
+
+.std_link::before {
+    content: '→ ';
+}
+
+.std_link:hover {
+    transform: translateX(5px);
+}
+
+.std_link[target="_blank"] {
+    background-image: url(/link-out.svg);
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: 0.857em;
+    padding-right: 1em;
+}
+
+.inline_image {
+    height: 1.5rem;
+    vertical-align: sub;
+}
+
+#reseaux {
+    list-style: none;
+    display: flex;
+    padding-inline-start: 0;
+}
+
+#reseaux img {
+    margin: 5px;
+    height: 25px;
+    filter: brightness(100);
 }
