@@ -1,0 +1,107 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+* {
+    font-family: 'Ubuntu';
+}
+
+#container {
+    margin: 25px;
+}
+
+header {
+    margin: 0;
+    background-color: green;
+    color: white;
+    text-align: center;
+
+}
+
+img#sapin {
+    margin: 0 auto;
+    display: block;
+    height: max-content;
+    max-width: calc(100vw - 2*25px);
+}
+
+footer {
+    background-color: green;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+.lien_footer {
+    color: white;
+}
+
+p {
+    text-align: justify;
+    justify-content: center;
+}
+
+@media (min-width:768px) {
+    #container {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    img {
+        margin: 0;
+    }
+
+    #context {
+        max-width: 300px;
+    }
+}
+
+.std_link {
+    text-decoration: none;
+    color: inherit;
+    transition: ease-out .1s;
+}
+
+.std_link::before {
+    content: '→ ';
+}
+
+.std_link:hover {
+    transform: translateX(5px);
+}
+
+.std_link[target="_blank"] {
+    background-image: url(/link-out.svg);
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: 0.857em;
+    padding-right: 1em;
+}
+
+.inline_image {
+    height: 1.5rem;
+    vertical-align: sub;
+}
+
+#reseaux {
+    list-style: none;
+    display: flex;
+    padding-inline-start: 0;
+}
+
+#reseaux img {
+    margin: 5px;
+    height: 25px;
+    filter: brightness(100);
+}
