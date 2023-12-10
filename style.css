@@ -20,9 +20,11 @@ header {
 
 }
 
-img {
+img#sapin {
     margin: 0 auto;
     display: block;
+    height: max-content;
+    max-width: calc(100vw - 2*25px);
 }
 
 footer {
