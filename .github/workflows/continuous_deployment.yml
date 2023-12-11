@@ -1,0 +1,36 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CD
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "deployed" ]
+  pull_request:
+    branches: [ "deployed" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    steps:
+      - name: pull_main
+        uses: appleboy/ssh-action@master
+        with:
+          host: ssh.28bis.fr
+          username: dev_web
+          key: ${{ secrets.DEV_WEB_GH_CD }}
+          port: 22
+          script: |
+            eval "$(ssh-agent -s)"
+            ssh-add ~/.ssh/id_rsa_github
+            cd git-noel
+            #git pull
+            git fetch remote deployed
+            git reset --hard remote/deployed
