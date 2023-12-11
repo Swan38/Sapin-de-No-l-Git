@@ -14,7 +14,10 @@
         <h1 style="margin:  0;padding: 15px;">Sapin de Noël Git</h1>
     </header>
     <div id="container">
-        <img id="sapin" src="sapin.webp" alt="Image du sapin" />
+        <div id="sapin_et_deco">
+            <img id="sapin" src="/img/sapin.webp" alt="Image du sapin">
+            <img class="décoration" data-width=".3" data-height=".7" data-scale_width=".1" src="/img/décorations/Boule-brillante-rouge.webp">
+        </div>
         <div id="context">
             <p>
                 Le principe est de découvrir l'utilisation des repository, en clonant celui-ci, en y faisant une
@@ -40,13 +43,21 @@
             Retrouvez les autres événements de l'association sur nos réseaux :
         </p>
         <ul id="reseaux">
-            <li><a href="https://www.facebook.com/grenoblepolybot"><img src="/icons_dark/facebook.svg" alt="facebook_link"></a></li>
-            <li><a href="https://www.instagram.com/polybotgrenoble/"><img src="/icons_dark/instagram.svg" alt="instagram_link"></a></li>
-            <li><a href="https://discord.gg/Ch42sgp"><img src="/icons_dark/discord_dark.svg" alt="discord_link"></a></li>
-            <li><a href="mailto:contact@polybot-grenoble.fr"><img src="/icons_dark/envelope-solid.svg" alt="email_link"></a></li>
-            <li><a href="https://gitlab.com/polybot-grenoble"><img src="/icons_dark/gitlab.svg" alt="gitlab_link"></a></li>
+            <li><a href="https://www.facebook.com/grenoblepolybot"><img src="/img/icons_dark/facebook.svg"
+                        alt="facebook_link"></a></li>
+            <li><a href="https://www.instagram.com/polybotgrenoble/"><img src="/img/icons_dark/instagram.svg"
+                        alt="instagram_link"></a></li>
+            <li><a href="https://discord.gg/Ch42sgp"><img src="/img/icons_dark/discord_dark.svg" alt="discord_link"></a>
+            </li>
+            <li><a href="mailto:contact@polybot-grenoble.fr"><img src="/img/icons_dark/envelope-solid.svg"
+                        alt="email_link"></a></li>
+            <li><a href="https://gitlab.com/polybot-grenoble"><img src="/img/icons_dark/gitlab.svg" alt="gitlab_link"></a>
+            </li>
         </ul>
     </footer>
+
+    <script src="/décoration.js"></script>
+
 </body>
 
 </html>

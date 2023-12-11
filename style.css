@@ -82,7 +82,7 @@ p {
 }
 
 .std_link[target="_blank"] {
-    background-image: url(/link-out.svg);
+    background-image: url(/img/link-out.svg);
     background-position: center right;
     background-repeat: no-repeat;
     background-size: 0.857em;
@@ -104,4 +104,8 @@ p {
     margin: 5px;
     height: 25px;
     filter: brightness(100);
+}
+
+.décoration {
+    position: absolute;
 }
